@@ -113,6 +113,7 @@ if type rg &> /dev/null; then
   export FZF_DEFAULT_COMMAND='rg --files'
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
+
 # Bunch of other shit that's going to be auto-added
 {{- if eq .chezmoi.hostname "NY1C02D63PCMD6R" }}
 export ARTIFACTORY_USER="{{ .artifactory_user }}"
