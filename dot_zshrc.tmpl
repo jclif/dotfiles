@@ -115,6 +115,11 @@ if type rg &> /dev/null; then
 fi
 
 # Bunch of other shit that's going to be auto-added
+
+{{- if eq .chezmoi.hostname "Jareds-MacBook-Pro" }}
+. $HOME/.asdf/asdf.sh
+{{- end }}
+
 {{- if eq .chezmoi.hostname "NY1C02D63PCMD6R" }}
 export ARTIFACTORY_USER="{{ .artifactory_user }}"
 export ARTIFACTORY_PASSWORD="{{ .artifactory_password }}"
@@ -127,5 +132,6 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 {{- end }}
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -17,8 +17,16 @@ Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/Align'
 " Plug 'dense-analysis/ale'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vim-which-key'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'} |
+  \ Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'} |
+  \ Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'} |
+  \ Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'} |
+  \ Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'} |
+  \ Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'} |
+  \ Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'} |
+
 Plug 'preservim/nerdtree' |
   \ Plug 'jistr/vim-nerdtree-tabs' |
   \ Plug 'Xuyuanp/nerdtree-git-plugin' |
@@ -34,7 +42,6 @@ Plug 'rking/ag.vim'
 Plug 'brooth/far.vim'
 
 " Syntax
-Plug 'Valloric/MatchTagAlways'
 Plug 'elixir-lang/vim-elixir'
 Plug 'groenewege/vim-less'
 Plug 'isRuslan/vim-es6'
