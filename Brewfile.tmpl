@@ -12,7 +12,6 @@ brew "mas"
 
 # IDE
 brew "neovim"
-brew "yarn"
 
 # Terminal multiplexer
 brew "tmux"
@@ -39,6 +38,9 @@ brew 'fzf'
 
 # ripgrep is text search; we prefer it over grep, ag, git grep, ucg, pt, sift.
 brew 'ripgrep'
+
+# GPG
+brew "gnupg"
 
 {{- if eq .chezmoi.hostname "NY1C02D63PCMD6R" }}
 brew "nvm"
