@@ -1,15 +1,44 @@
 tap "homebrew/cask"
 tap "heroku/brew"
 
+# Auto-completion
+brew "brew-cask-completion"
+
+# Dotfile Manager
 brew "chezmoi"
+
+# App Store Manager
 brew "mas"
+
+# IDE
 brew "neovim"
+brew "yarn"
+
+# Terminal multiplexer
 brew "tmux"
 brew "tmuxinator"
-brew "brew-cask-completion"
-brew "ripgrep"
 brew "reattach-to-user-namespace"
-brew "yarn"
+
+# Free and open source distributed version control system
+brew 'git'
+
+# Git Large File Storage
+brew 'git-lfs'
+
+# Basic file, shell and text manipulation utilities of the GNU operating system.
+brew "coreutils"
+
+# OpenSSL is an open-source implementation of the SSL and TLS protocols.
+brew 'openssl'
+
+# Functions for use by applications that allow users to edit command lines while typing.
+brew 'readline'
+
+# FZF is a command line fuzzy finder.
+brew 'fzf'
+
+# ripgrep is text search; we prefer it over grep, ag, git grep, ucg, pt, sift.
+brew 'ripgrep'
 
 {{- if eq .chezmoi.hostname "NY1C02D63PCMD6R" }}
 brew "nvm"
@@ -17,7 +46,6 @@ brew "nvm"
 
 {{- if eq .chezmoi.hostname "Jareds-MacBook-Pro" }}
 brew "heroku"
-brew "coreutils"
 brew "curl"
 brew "git"
 
@@ -25,14 +53,35 @@ cask "iterm2"
 cask "backblaze"
 cask "dropbox"
 cask "zoom"
-cask "rectangle"
-cask "ngrok"
 cask "discord"
 cask "notion"
 cask "sunsama"
 cask "google-chrome"
 cask "google-backup-and-sync"
-# cask "rescuetime"
+
+# Window manager
+cask "rectangle"
+
+# Expose localhost ports over the internet
+cask "ngrok"
+
+# Time Tracking
+cask "toggl-track"
+
+# VLC media player
+cask 'vlc'
+
+# Powerful, intelligent flash cards
+cask 'anki'
+
+# Time tracker
+cask "rescuetime"
+
+# Spotify music player
+cask 'spotify'
+
+# Dash documentation browser and code snippet manager
+cask 'dash'
 
 mas "Apple Developer", id: 640199958
 mas "1Password", id: 1333542190
