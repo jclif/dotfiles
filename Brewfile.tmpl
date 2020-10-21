@@ -43,6 +43,9 @@ brew "gnupg"
 
 {{- if eq .chezmoi.hostname "NY1C02D63PCMD6R" }}
 brew "nvm"
+
+# Kubernetes IDE
+cask "lens"
 {{- end }}
 
 {{- if eq .chezmoi.hostname "Jareds-MacBook-Pro" }}
