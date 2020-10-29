@@ -46,9 +46,11 @@ endif
 " Open Nerdtree by default, except when vim is opened by git commit
 :autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
 map <leader>d :NERDTreeToggle<CR>
+map <leader>n :NERDTreeFind<CR>
 let NERDTreeIgnore=['\.pyc$', '\~$']
 let g:nerdtree_tabs_open_on_gui_startup = 0
 let g:nerdtree_tabs_open_on_console_startup = 0
+let g:NERDTreeWinSize = 60
 let NERDTreeShowHidden=1
 " Refresh the nerdtree window ever so often
 au CursorHold * if exists("t:NerdTreeBufName") | call <SNR>15_refreshRoot() | endif
