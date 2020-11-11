@@ -42,6 +42,9 @@ Plug 'rking/ag.vim'
 " Find and replace
 Plug 'brooth/far.vim'
 
+" Bookmarks
+Plug 'MattesGroeger/vim-bookmarks'
+
 " Syntax
 Plug 'elixir-lang/vim-elixir'
 Plug 'groenewege/vim-less'

@@ -86,6 +86,18 @@ if exists("g:loaded_webdevicons")
 	call webdevicons#refresh()
 endif
 
+" Bookmark
+nmap <Leader>mm <Plug>BookmarkToggle
+nmap <Leader>mi <Plug>BookmarkAnnotate
+nmap <Leader>ma <Plug>BookmarkShowAll
+nmap <Leader>mn <Plug>BookmarkNext
+nmap <Leader>mp <Plug>BookmarkPrev
+nmap <Leader>cc <Plug>BookmarkClear
+nmap <Leader>mx <Plug>BookmarkClearAll
+nmap <Leader>mkk <Plug>BookmarkMoveUp
+nmap <Leader>jj <Plug>BookmarkMoveDown
+nmap <Leader>mg <Plug>BookmarkMoveToLine
+
 " WhichKey
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 set timeoutlen=500
