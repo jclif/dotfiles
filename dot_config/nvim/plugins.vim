@@ -36,8 +36,6 @@ Plug 'preservim/nerdtree' |
 " Search
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'kien/ctrlp.vim'
-Plug 'rking/ag.vim'
 
 " Find and replace
 Plug 'brooth/far.vim'
@@ -66,6 +64,9 @@ Plug 'mattn/emmet-vim'
 
 " Terraform
 Plug 'hashivim/vim-terraform'
+
+" Handlebars
+Plug 'mustache/vim-mustache-handlebars'
 
 " Fun, but not useful
 Plug 'bling/vim-airline'

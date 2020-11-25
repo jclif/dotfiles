@@ -7,20 +7,13 @@ let g:gist_detect_filetype = 2
 let g:gist_show_privates = 1
 let g:gist_post_private = 1
 
-" crtl-p
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'  " search anything (in files, buffers and MRU files at the same time.)
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard | grep -Ev node_modules']
-let g:ctrlp_custom_ignore = { 'dir': 'build$\|node_modules$' }
-let g:ctrlp_match_window_bottom = 0 " show the match window at the top of the screen
-let g:ctrlp_max_height = 10 " maxiumum height of match window
-let g:ctrlp_switch_buffer = 'et' " jump to a file if it's open already
-let g:ctrlp_use_caching = 1 " enable caching
-let g:ctrlp_clear_cache_on_exit = 0 " speed up by not removing clearing cache everytime
-let g:ctrlp_show_hidden = 0 " don't show me dotfiles
-let g:ctrlp_mruf_max = 250 " number of recently opened files
-" map ; :CtrlPBuffer<CR>
-" map <Leader>p :CtrlP <cr>
+" FZF
+let g:fzf_layout = { 'down': '40%' }
+" Enable per-command history
+" - History files will be stored in the specified directory
+" - When set, CTRL-N and CTRL-P will be bound to 'next-history' and
+"   'previous-history' instead of 'down' and 'up'.
+let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 " Double rainbow - What does it mean!?
 au VimEnter * RainbowParenthesesToggle
@@ -34,7 +27,6 @@ let g:syntastic_puppet_lint_disable = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
 " Airline configs
-"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
@@ -55,6 +47,13 @@ let NERDTreeShowHidden=1
 " Refresh the nerdtree window ever so often
 au CursorHold * if exists("t:NerdTreeBufName") | call <SNR>15_refreshRoot() | endif
 
+" DevIcons
+"get rid of [  ] around icons in NerdTree
+syntax enable
+if exists("g:loaded_webdevicons")
+	call webdevicons#refresh()
+endif
+
 " Tmux/vim clipboard fix
 set clipboard=unnamed
 
@@ -69,22 +68,6 @@ vmap <Leader>e <Plug>(EasyAlign)
 " Ignore in buffer explorer
 let g:netrw_liststyle= 1 " Tree-mode
 let g:netrw_list_hide= '.*\.swp$,.*/$'
-
-" Ag
-nnoremap <leader>a :Ag<Space>
-if executable('ag')
-  " Note we extract the column as well as the file and line number
-  set grepprg=ag\ --nogroup\ --nocolor\ --column
-  set grepformat=%f:%l:%c%m
-endif
-" set grepprg=ag\ --nogroup\ --nocolor\ --column
-
-" DevIcons
-"get rid of [  ] around icons in NerdTree
-syntax enable
-if exists("g:loaded_webdevicons")
-	call webdevicons#refresh()
-endif
 
 " Bookmark
 nmap <Leader>mm <Plug>BookmarkToggle
