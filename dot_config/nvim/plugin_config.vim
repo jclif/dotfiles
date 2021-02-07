@@ -15,6 +15,13 @@ let g:fzf_layout = { 'down': '40%' }
 "   'previous-history' instead of 'down' and 'up'.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
+" Call ripgrep with additional options
+" :RG -g '*.py'
+command! -bang -nargs=* RG
+  \ call fzf#vim#grep(
+  \ "rg --column --line-number --no-heading --color=always --smart-case " .
+  \ <q-args>, 1, fzf#vim#with_preview(), <bang>0)
+
 " Double rainbow - What does it mean!?
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
