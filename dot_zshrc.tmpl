@@ -1,3 +1,4 @@
+ZSH_DISABLE_COMPFIX=true
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -117,7 +118,7 @@ fi
 # Bunch of other shit that's going to be auto-added
 
 {{- if eq .chezmoi.hostname "Jareds-MacBook-Pro" }}
-# Nothing here yet
+POWERLEVEL9K_MODE='nerdfont-complete'
 {{- end }}
 
 {{- if eq .chezmoi.hostname "NY1C02D63PCMD6R" }}

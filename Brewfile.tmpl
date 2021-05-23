@@ -1,5 +1,6 @@
 tap "homebrew/cask"
 tap "heroku/brew"
+tap "homebrew/cask-fonts"
 
 # Auto-completion
 brew "brew-cask-completion"
@@ -61,11 +62,12 @@ cask "keepingyouawake"
 cask "chromedriver"
 {{- end }}
 
-{{- if eq .chezmoi.hostname "Jareds-MBP" }}
+{{- if eq .chezmoi.hostname "Jareds-MacBook-Pro" }}
 brew "heroku"
 brew "curl"
 brew "git"
 brew "awscli"
+brew "tmuxinator"
 
 cask "iterm2"
 cask "backblaze"
@@ -76,6 +78,7 @@ cask "notion"
 cask "sunsama"
 cask "google-chrome"
 cask "google-backup-and-sync"
+cask "font-hack-nerd-font"
 
 # Window manager
 cask "rectangle"
@@ -100,9 +103,6 @@ cask 'spotify'
 
 # Dash documentation browser and code snippet manager
 cask 'dash'
-
-# Postgres.app
-cask 'postgres'
 
 # Needed for ffi
 brew "automake"
