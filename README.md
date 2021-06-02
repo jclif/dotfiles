@@ -15,3 +15,9 @@ brew install chezmoi
 ```bash
 chezmoi init --apply --verbose https://github.com/jclif/dotfiles.git
 ```
+
+1. Set powerline font to Hack Nerd
+1. Install global languages
+```bash
+cd ~/ && asdf install
+```
