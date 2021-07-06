@@ -48,6 +48,13 @@ brew "bat"
 # Docker Terminal GUI
 brew "lazydocker"
 
+# Tracks most-used directories to make cd smarter
+brew "z"
+
+################
+#  Work Stuff  #
+################
+
 {{- if eq .chezmoi.hostname "NY1C02D63PCMD6R" }}
 brew "nvm"
 brew "watchman"
@@ -61,6 +68,10 @@ cask "keepingyouawake"
 # Chromedriver (for Selenium)
 cask "chromedriver"
 {{- end }}
+
+####################
+#  Personal Stuff  #
+####################
 
 {{- if eq .chezmoi.hostname "Jareds-MacBook-Pro" }}
 brew "heroku"
