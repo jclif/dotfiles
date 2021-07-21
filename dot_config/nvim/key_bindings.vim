@@ -70,3 +70,6 @@ nmap <S-Enter> O<Esc>j
 nmap <CR> o<Esc>k
 
 nmap [<Space> O<Esc>j
+
+" Format current JSON file/buffer
+nnoremap <leader>jq :%!jq .
